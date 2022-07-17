@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/projects.css">
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <div id="marker"></div>
+        </ul>
+
+        <div class="projects">
+
+            <h4>Project-1</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, qui explicabo. Culpa ullam, nobis
+                repellendus minima temporibus modi atque blanditiis ipsa dicta, ea id quos dolorum porro mollitia
+                accusantium neque dolore iusto quae commodi! Perferendis quidem officiis modi non animi dolores enim
+                dolore, voluptatem odit rerum temporibus omnis similique nisi accusantium provident laboriosam sequi
+                quibusdam quia ipsa mollitia aspernatur doloremque itaque iure? Laborum, incidunt tempora! Nostrum ad
+                quisquam mollitia error adipisci placeat maiores aspernatur quaerat corporis eveniet dolor laborum atque
+                odit repellendus, esse nobis ipsum distinctio voluptas doloribus, in rerum totam dolores similique
+                blanditiis? Adipisci fugiat impedit laudantium aliquam alias.</p>
+
+            <br>
+
+            <h4>Project-2</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis deleniti doloribus temporibus adipisci
+                fugit illo voluptatum enim veritatis quibusdam dignissimos mollitia corporis recusandae, aliquam veniam
+                quod reiciendis minima, nihil blanditiis nesciunt vitae optio quos quas? Est sed amet error aspernatur
+                temporibus beatae, iste veniam rerum neque ullam deserunt minus facere repudiandae esse pariatur aut
+                voluptates harum dignissimos, similique id veritatis consectetur ab. Tempore, repellat totam! Suscipit
+                qui fuga ab cumque ullam. Cupiditate, ut! Eum, dignissimos sunt ipsum cupiditate consequuntur itaque
+                veniam eveniet molestias necessitatibus odit. Illo animi qui quam necessitatibus voluptas dicta, saepe
+                nesciunt error, dignissimos ipsam modi vero amet?</p>
+
+                <br>
+
+                <h4>Project-3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquid explicabo repudiandae, cumque, architecto deserunt fugiat quae officiis doloribus sed consequuntur earum similique quisquam ipsam vitae pariatur sequi velit, veritatis incidunt quod amet reiciendis! Dolore, voluptatem! Ex iste illo omnis soluta id necessitatibus aliquid reiciendis delectus velit nesciunt commodi facere, labore earum ipsum culpa voluptas, consectetur maxime nihil et dolore eum quisquam vero dolorum? Possimus dolores veniam vel laboriosam illo repellat nihil velit dolorum, recusandae iusto eligendi, error modi deleniti animi pariatur quis fugit corporis assumenda laborum deserunt tempora, delectus asperiores praesentium nemo! Alias aperiam consectetur explicabo rem? Cum, commodi.</p>
+
+        </div>
+
+
+
+        <script>
+            const maker = document.querySelector('#marker');
+            const item = document.querySelectorAll('ul li a');
+
+            function Indicator(e) {
+                marker.style.left = e.offsetLeft + 'px';
+                marker.style.width = e.offsetWidth + 'px';
+            }
+
+            item.forEach(link => {
+                link.addEventListener('mousemove', (e) => {
+                    Indicator(e.target);
+                })
+            })
+
+        </script>
+
+
+    </div>
+
+</body>
+
+</html>

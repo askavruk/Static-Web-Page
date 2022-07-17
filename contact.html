@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/contact.css">
+
+</head>
+
+<body>
+    <div>
+
+        <ul>
+            <li class="ref"><a href="index.html">Home</a></li>
+            <li class="ref"><a href="about.html">About</a></li>
+            <li class="ref"><a href="contact.html">Contact</a></li>
+            <li class="ref"><a href="projects.html">Projects</a></li>
+            <li class="ref"><a href="resume.html">Resume</a></li>
+            <div id="marker"></div>
+        </ul>
+
+        <div class="icons">
+            <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/feed/"><img src='img/linkedin.png' /></a></li>
+                <li><a href="https://github.com/askavruk"><img src='img/github.png' /></a></li>
+                <li><a href="mailto:asena.kavruk@outlook.com"><img src='img/mail.png' /></a></li>
+            </ul>
+           
+        </div>
+
+        <script>
+            const maker = document.querySelector('#marker');
+            const item = document.querySelectorAll('ul li a');
+
+            function Indicator(e) {
+                marker.style.left = e.offsetLeft + 'px';
+                marker.style.width = e.offsetWidth + 'px';
+            }
+
+            item.forEach(link => {
+                link.addEventListener('mousemove', (e) => {
+                    Indicator(e.target);
+                })
+            })
+
+        </script>
+
+    </div>
+
+   
+
+</body>
+
+</html>

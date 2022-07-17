@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/about.css">
+
+</head>
+
+<body>
+    <div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <div id="marker"></div>
+        </ul>
+
+        <div class="about">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nesciunt, ullam impedit vero
+                excepturi commodi ad veritatis sed. Dolorem voluptatem odio suscipit reiciendis quia consequuntur
+                tempore excepturi dolorum dolore quasi aliquid repellendus reprehenderit itaque dignissimos commodi,
+                adipisci, doloribus animi beatae quaerat voluptate, error harum. Fugit libero, delectus a officia rerum
+                hic quibusdam molestias quo? Molestiae quidem velit, omnis ut nulla incidunt inventore placeat ea ipsa
+                dolorem iure ex alias id ipsam nesciunt mollitia consequatur, laudantium reiciendis non voluptatibus
+                reprehenderit nisi! Veniam molestiae, nam impedit cum voluptates delectus eveniet laborum quibusdam!
+                Nostrum cumque molestias harum suscipit ab! Tempora harum velit atque!</p>
+
+        </div>
+
+        <div class="box">
+            <div class="imageBox">
+                <img src="img/pexels-frandany-12478858.jpg" alt="sculpture">
+            </div>
+
+            <div class="imageBox">
+                <img src="img/pexels-haticebaran-11606102 (1).jpg" alt="ancient">
+            </div>
+
+            <div class="imageBox">
+                <img src="img/pexels-spencer-davis-4388167.jpg" alt="petra">
+            </div>
+        </div>
+
+
+
+        <script>
+            const maker = document.querySelector('#marker');
+            const item = document.querySelectorAll('ul li a');
+
+            function Indicator(e) {
+                marker.style.left = e.offsetLeft + 'px';
+                marker.style.width = e.offsetWidth + 'px';
+            }
+
+            item.forEach(link => {
+                link.addEventListener('mousemove', (e) => {
+                    Indicator(e.target);
+                })
+            })
+
+        </script>
+
+
+
+    </div>
+
+</body>
+
+</html>
